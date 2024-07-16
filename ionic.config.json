@@ -1,0 +1,7 @@
+{
+  "name": "AICHATBOT",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
