@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Chat with AI</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="chat-content">
+  <ion-list lines="none" class="message-list">
+    <ion-item *ngFor="let message of messages" [class]="getMessageClass(message.sender)">
+      <ion-label>{{message.content}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input placeholder="Type your message..." [(ngModel)]="newMessage" class="message-input"> </ion-input>
+    <ion-button color="primary" (click)="sendMessage()" class="send-button"> Send </ion-button>
+  </ion-toolbar>
+</ion-footer>

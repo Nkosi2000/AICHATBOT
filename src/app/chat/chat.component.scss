@@ -1,0 +1,53 @@
+.chat.content{
+    padding: 10px;
+    overflow-y: auto; /*scrolling ability*/
+    max-height: calc(100vh - 112px); /*adjusted max-hieght for message list to fir screen*/
+}
+
+.message-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message-item{
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message-list.user{
+    align-self: flex-end;
+    background-color: burlywood;
+}
+
+.message-list.ai{
+    align-self: flex-start;
+    background-color: aquamarine;
+}
+
+.message.input{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.send-button{
+    margin-left: 10px;
+}
+
+/*responsive design*/
+
+@media (max-width: 576px){
+    .message-item{
+        max-width: 90%; /*adjust for saller screen sizes*/
+    }
+
+    .message.input{
+        margin-right: 0;/*you can remove margin on smaller screens*/
+        margin-bottom: 10px; /*added margin bottom to seperate input from send button*/
+    }
+
+    .send-button{
+        margin-left: 0;
+    }
+}
