@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import * as firebase from 'firebase/app';
-import 'firebase/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import firebase from 'firebase/compat/app'; // Use compat version
+import 'firebase/compat/firestore'; // Import Firestore for FieldValue
 
 @Component({
   selector: 'app-chat',
